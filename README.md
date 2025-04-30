@@ -1,5 +1,4 @@
-# Save the README content to a file
-readme_content = """# PegasusSummarizer 📝  
+
 **Abstractive Text Summarization using HuggingFace Transformers**
 
 ---
