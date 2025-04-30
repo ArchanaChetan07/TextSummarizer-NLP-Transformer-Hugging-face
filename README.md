@@ -3,39 +3,30 @@ readme_content = """# PegasusSummarizer 📝
 **Abstractive Text Summarization using HuggingFace Transformers**
 
 ---
+ Overview
+PegasusSummarizer is an end-to-end pipeline for abstractive text summarization of conversational data using the Pegasus-SAMSum model from Hugging Face. It follows modular, MLOps-inspired architecture with YAML-based configuration, and evaluates performance using ROUGE metrics.
 
-## 📌 Overview
-
-PegasusSummarizer is an end-to-end pipeline for generating abstractive summaries from conversational data using the [google/pegasus-samsum](https://huggingface.co/google/pegasus-samsum) model. The system is modularized for clean MLOps-style implementation using YAML configuration files and supports evaluation via ROUGE scores.
-
-Output Artifacts
+🧾 Output Artifacts
 Model Checkpoint: artifacts/pegasus-samsum-model/
-
 Tokenizer: artifacts/tokenizer/
-
-Metrics Report: artifacts/metrics.csv
+Evaluation Report: artifacts/metrics.csv
 
 📦 Dependencies
-See requirements.txt. Core packages include:
-
-transformers[sentencepiece]
-
-datasets, rouge_score, evaluate, nltk, torch
-
-PyYAML, pandas, matplotlib, tqdm
-
-fastapi, uvicorn, jinja2 for deployment (optional)
+Refer to requirements.txt for full dependency list. Core packages include:
+transformers[sentencepiece], datasets, evaluate, rouge_score, sacrebleu, nltk, torch
+PyYAML, pandas, tqdm, matplotlib
+Deployment (optional): fastapi, uvicorn, jinja2
+Utilities: python-box, ensure, mypy-boto3-s3
 
 ✨ Use Cases
-Summarizing customer support chat logs
+Summarizing customer support chat transcripts
+Generating concise summaries of long email threads
+Creating structured meeting summaries for internal documentation
 
-Digesting long email threads
+🔮 Future Enhancements
+Model deployment via FastAPI or Docker-based microservice
+Benchmarking against other transformer models (e.g., BART, T5)
+Web UI integration using Streamlit or React for live inference
 
-Creating meeting summaries
 
-📈 Future Enhancements
-Deployment via FastAPI
 
-Model benchmarking vs BART and T5
-
-Web UI using Streamlit or React
